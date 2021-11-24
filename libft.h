@@ -6,14 +6,16 @@
 /*   By: mriant <marvin@42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/11/23 17:16:58 by mriant            #+#    #+#             */
-/*   Updated: 2021/11/23 17:25:42 by mriant           ###   ########.fr       */
+/*   Updated: 2021/11/24 12:14:16 by mriant           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#ifndef _LIBFT_H
-#define _LIBFT_H
+#ifndef LIBFT_H
+# define LIBFT_H
 
-int ft_isalpha(int c);
-int ft_isdigit(int c);
+int	ft_isalpha(int c);
+int	ft_isdigit(int c);
+int	ft_isalnum(int c);
+int ft_isascii(int c);
 
 #endif

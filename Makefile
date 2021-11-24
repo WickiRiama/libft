@@ -6,13 +6,15 @@
 #    By: mriant <marvin@42.fr>                      +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2021/11/23 12:22:38 by mriant            #+#    #+#              #
-#    Updated: 2021/11/23 16:35:20 by mriant           ###   ########.fr        #
+#    Updated: 2021/11/24 12:15:42 by mriant           ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
 NAME = libft.a
 SRCS = ft_isalpha.c \
-	ft_isdigit.c
+	ft_isdigit.c \
+	ft_isalnum.c \
+	ft_isascii.c
 OBJ = ${SRCS:%.c=%.o}
 FLAGS = -Wall -Wextra -Werror
 
