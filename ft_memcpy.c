@@ -1,19 +1,30 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_isalpha.c                                       :+:      :+:    :+:   */
+/*   ft_memcpy.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: mriant <marvin@42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2021/11/23 17:09:29 by mriant            #+#    #+#             */
-/*   Updated: 2021/11/24 11:31:58 by mriant           ###   ########.fr       */
+/*   Created: 2021/11/26 09:31:58 by mriant            #+#    #+#             */
+/*   Updated: 2021/11/26 11:03:03 by mriant           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-int	ft_isalpha(int c)
+#include <stddef.h>
+
+void	*ft_memcpy(void *s1, const void *s2, size_t n)
 {
-	if ((c > 96 && c < 123) || (c > 64 && c < 91))
-		return (1);
-	else
-		return (0);
+	char	*str1;
+	char	*str2;
+	size_t	i;
+
+	str1 = s1;
+	str2 = (char *) s2;
+	i = 0;
+	while (i < n)
+	{
+		str1[i] = str2[i];
+		i ++;
+	}
+	return (s1);
 }
