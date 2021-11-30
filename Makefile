@@ -6,7 +6,7 @@
 #    By: mriant <marvin@42.fr>                      +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2021/11/23 12:22:38 by mriant            #+#    #+#              #
-#    Updated: 2021/11/30 13:32:10 by mriant           ###   ########.fr        #
+#    Updated: 2021/11/30 14:05:09 by mriant           ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -24,7 +24,8 @@ SRCS = ft_isalpha.c \
 	ft_strlcpy.c \
 	ft_strlcat.c \
 	ft_toupper.c \
-	ft_tolower.c
+	ft_tolower.c \
+	ft_strchr.c
 
 OBJ = ${SRCS:%.c=%.o}
 FLAGS = -Wall -Wextra -Werror
