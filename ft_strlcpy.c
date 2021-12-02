@@ -6,7 +6,7 @@
 /*   By: mriant <marvin@42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/11/26 17:54:48 by mriant            #+#    #+#             */
-/*   Updated: 2021/11/30 09:22:19 by mriant           ###   ########.fr       */
+/*   Updated: 2021/12/02 14:12:44 by mriant           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,10 +16,10 @@ size_t	ft_strlcpy(char *dst, const char *src, size_t size)
 {
 	size_t	i;
 
+	i = 0;
 	if (size > 0)
 	{
-		i = 0;
-		while (i < size - 1)
+		while (i < size - 1 && src[i])
 		{
 			dst[i] = src[i];
 			i ++;
