@@ -6,13 +6,13 @@
 /*   By: mriant <marvin@42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/12/03 09:52:21 by mriant            #+#    #+#             */
-/*   Updated: 2021/12/03 11:05:49 by mriant           ###   ########.fr       */
+/*   Updated: 2021/12/04 15:09:19 by mriant           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-size_t	ft_countw(char const *s, char c)
+static size_t	ft_countw(char const *s, char c)
 {
 	size_t	i;
 	size_t	count;
@@ -39,6 +39,8 @@ char	**ft_split(char const *s, char c)
 	size_t	start;
 
 	result = malloc(sizeof(char *) * (ft_countw(s, c) + 1));
+	if (!result)
+		return (NULL);
 	i = 0;
 	j = 0;
 	while (s[i])
