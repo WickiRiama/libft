@@ -6,11 +6,12 @@
 #    By: mriant <marvin@42.fr>                      +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2021/11/23 12:22:38 by mriant            #+#    #+#              #
-#    Updated: 2021/12/03 17:47:40 by mriant           ###   ########.fr        #
+#    Updated: 2021/12/04 17:00:26 by mriant           ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
 NAME = libft.a
+
 SRCS = ft_isalpha.c \
 	ft_isdigit.c \
 	ft_isalnum.c \
@@ -46,15 +47,26 @@ SRCS = ft_isalpha.c \
 	ft_putendl_fd.c \
 	ft_putnbr_fd.c
 
-OBJ = ${SRCS:%.c=%.o}
-FLAGS = -Wall -Wextra -Werror
+BONUS_SRCS = ft_lstnew.c
 
-all: ${NAME} 
+OBJ = ${SRCS:%.c=%.o}
+
+BONUS_OBJ = ${BONUS_SRCS:%.c=%.o}
+
+FLAGS = -Wall -Wextra -Werror
 
 ${NAME}: ${OBJ}
 	ar rcs ${NAME} ${OBJ}
 
+all: ${NAME} bonus
+
+bonus: ${NAME} ${BONUS_OBJ}
+	ar rucs ${NAME} ${BONUS_OBJ}
+
 ${OBJ}: %.o: %.c
+	gcc ${FLAGS} -c $< -o $@
+
+${BONUS_OBJ}: %.o: %.c
 	gcc ${FLAGS} -c $< -o $@
 
 clean:
