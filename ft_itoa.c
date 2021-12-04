@@ -6,13 +6,13 @@
 /*   By: mriant <marvin@42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/12/03 11:22:43 by mriant            #+#    #+#             */
-/*   Updated: 2021/12/03 19:08:39 by mriant           ###   ########.fr       */
+/*   Updated: 2021/12/04 11:48:25 by mriant           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-int	ft_nblen(long int n)
+static int	ft_nblen(long int n)
 {
 	int	n_len;
 
@@ -25,7 +25,7 @@ int	ft_nblen(long int n)
 	return (n_len);
 }
 
-void	ft_writenb(long int n, int neg, int len, char *result)
+static void	ft_writenb(long int n, int neg, int len, char *result)
 {
 	int	i;
 

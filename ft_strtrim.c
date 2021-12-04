@@ -6,32 +6,58 @@
 /*   By: mriant <marvin@42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/12/03 09:16:29 by mriant            #+#    #+#             */
-/*   Updated: 2021/12/03 09:49:19 by mriant           ###   ########.fr       */
+/*   Updated: 2021/12/04 14:28:28 by mriant           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-char	*ft_strtrim(char const *s1, char const *set)
+static int	ft_trimleft(int len, const char *s1, const char *set)
 {
-	size_t	i;
-	size_t	j;
-	size_t	s1_len;
+	int	i;
 
 	i = 0;
-	s1_len = ft_strlen(s1);
-	while (i < s1_len)
+	while (i < len)
 	{
 		if (!ft_strchr(set, s1[i]))
 			break ;
 		i ++;
 	}
-	j = s1_len - 1;
-	while (j + 1 > 0)
+	return (i);
+}
+
+static int	ft_trimright(int len, const char *s1, const char *set)
+{
+	int	i;
+
+	i = len - 1;
+	while (i >= 0)
 	{
-		if (!ft_strchr(set, s1[j]))
+		if (!ft_strchr(set, s1[i]))
 			break ;
-		j --;
+		i --;
 	}
-	return (ft_substr(s1, i, j - i + 1));
+	return (i);
+}
+
+char	*ft_strtrim(char const *s1, char const *set)
+{
+	int		i;
+	int		j;
+	int		s1_len;
+	char	*result;
+
+	i = 0;
+	s1_len = (int)ft_strlen(s1);
+	i = ft_trimleft(s1_len, s1, set);
+	j = ft_trimright(s1_len, s1, set);
+	if (j >= i)
+		result = (ft_substr(s1, i, j - i + 1));
+	else
+	{
+		result = calloc(1, sizeof(char));
+		if (!result)
+			return (NULL);
+	}
+	return (result);
 }
