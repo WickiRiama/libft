@@ -6,7 +6,7 @@
 #    By: mriant <marvin@42.fr>                      +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2021/11/23 12:22:38 by mriant            #+#    #+#              #
-#    Updated: 2021/12/04 17:00:26 by mriant           ###   ########.fr        #
+#    Updated: 2021/12/06 11:01:36 by mriant           ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -47,7 +47,8 @@ SRCS = ft_isalpha.c \
 	ft_putendl_fd.c \
 	ft_putnbr_fd.c
 
-BONUS_SRCS = ft_lstnew.c
+BONUS_SRCS = ft_lstnew.c \
+	ft_lstadd_front.c
 
 OBJ = ${SRCS:%.c=%.o}
 
@@ -61,7 +62,7 @@ ${NAME}: ${OBJ}
 all: ${NAME} bonus
 
 bonus: ${NAME} ${BONUS_OBJ}
-	ar rucs ${NAME} ${BONUS_OBJ}
+	ar rcs ${NAME} ${BONUS_OBJ}
 
 ${OBJ}: %.o: %.c
 	gcc ${FLAGS} -c $< -o $@
