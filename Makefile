@@ -6,7 +6,7 @@
 #    By: mriant <marvin@42.fr>                      +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2021/11/23 12:22:38 by mriant            #+#    #+#              #
-#    Updated: 2021/12/06 12:18:32 by mriant           ###   ########.fr        #
+#    Updated: 2021/12/06 13:10:51 by mriant           ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -49,7 +49,8 @@ SRCS = ft_isalpha.c \
 
 BONUS_SRCS = ft_lstnew.c \
 	ft_lstadd_front.c \
-	ft_lstsize.c
+	ft_lstsize.c \
+	ft_lstlast.c
 
 OBJ = ${SRCS:%.c=%.o}
 
