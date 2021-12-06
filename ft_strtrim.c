@@ -6,7 +6,7 @@
 /*   By: mriant <marvin@42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/12/03 09:16:29 by mriant            #+#    #+#             */
-/*   Updated: 2021/12/04 14:28:28 by mriant           ###   ########.fr       */
+/*   Updated: 2021/12/06 16:59:08 by mriant           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -55,7 +55,7 @@ char	*ft_strtrim(char const *s1, char const *set)
 		result = (ft_substr(s1, i, j - i + 1));
 	else
 	{
-		result = calloc(1, sizeof(char));
+		result = ft_calloc(1, sizeof(char));
 		if (!result)
 			return (NULL);
 	}
