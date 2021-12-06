@@ -6,7 +6,7 @@
 #    By: mriant <marvin@42.fr>                      +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2021/11/23 12:22:38 by mriant            #+#    #+#              #
-#    Updated: 2021/12/06 11:01:36 by mriant           ###   ########.fr        #
+#    Updated: 2021/12/06 12:18:32 by mriant           ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -48,7 +48,8 @@ SRCS = ft_isalpha.c \
 	ft_putnbr_fd.c
 
 BONUS_SRCS = ft_lstnew.c \
-	ft_lstadd_front.c
+	ft_lstadd_front.c \
+	ft_lstsize.c
 
 OBJ = ${SRCS:%.c=%.o}
 
@@ -71,11 +72,11 @@ ${BONUS_OBJ}: %.o: %.c
 	gcc ${FLAGS} -c $< -o $@
 
 clean:
-	rm -rf ${OBJ}
+	rm -rf ${OBJ} ${BONUS_OBJ}
 
 fclean: clean
 	rm -rf ${NAME}
 
-re: fclean all
+re: fclean ${NAME}
 
 .PHONY = all clean fclean re
