@@ -6,7 +6,7 @@
 /*   By: mriant <marvin@42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/12/06 16:21:39 by mriant            #+#    #+#             */
-/*   Updated: 2021/12/06 17:15:08 by mriant           ###   ########.fr       */
+/*   Updated: 2021/12/06 17:45:31 by mriant           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -26,8 +26,7 @@ t_list	*ft_lstmap(t_list *lst, void (*f)(void *), void (*del)(void *))
 			ft_lstclear(&newlist, del);
 			return (NULL);
 		}
-		ft_lstadd_back(&newlist, ft_lstnew(lst->content));
-		temp = ft_lstlast(newlist);
+		ft_lstadd_back(&newlist, temp);
 		f(temp->content);
 		lst = lst->next;
 	}
