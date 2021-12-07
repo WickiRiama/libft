@@ -6,7 +6,7 @@
 /*   By: mriant <marvin@42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/12/02 14:25:42 by mriant            #+#    #+#             */
-/*   Updated: 2021/12/07 15:08:44 by mriant           ###   ########.fr       */
+/*   Updated: 2021/12/07 16:59:36 by mriant           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,7 +17,7 @@ char	*ft_substr(char const *s, unsigned int start, size_t len)
 	char	*result;
 	size_t	i;
 
-	if (start > ft_strlen(s))
+	if (!s || start > ft_strlen(s))
 	{
 		result = ft_calloc(1, 1);
 		return (result);

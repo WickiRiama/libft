@@ -6,7 +6,7 @@
 /*   By: mriant <marvin@42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/11/26 09:31:58 by mriant            #+#    #+#             */
-/*   Updated: 2021/11/26 11:03:03 by mriant           ###   ########.fr       */
+/*   Updated: 2021/12/07 17:14:26 by mriant           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,7 +17,9 @@ void	*ft_memcpy(void *s1, const void *s2, size_t n)
 	char	*str1;
 	char	*str2;
 	size_t	i;
-
+	
+	if ((!s2 ||  !s1) && n > 0)
+		return (NULL);
 	str1 = s1;
 	str2 = (char *) s2;
 	i = 0;

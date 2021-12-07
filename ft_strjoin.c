@@ -6,7 +6,7 @@
 /*   By: mriant <marvin@42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/12/02 17:38:19 by mriant            #+#    #+#             */
-/*   Updated: 2021/12/04 15:12:26 by mriant           ###   ########.fr       */
+/*   Updated: 2021/12/07 17:19:49 by mriant           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -20,7 +20,7 @@ char	*ft_strjoin(char const *s, char const *s2)
 
 	i = 0;
 	j = 0;
-	result = malloc(sizeof(char) * (ft_strlen(s) + ft_strlen(s2) + 1));
+	result = ft_calloc(sizeof(char), (ft_strlen(s) + ft_strlen(s2) + 1));
 	if (!result)
 		return (NULL);
 	while (s[i])

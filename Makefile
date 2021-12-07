@@ -6,7 +6,7 @@
 #    By: mriant <marvin@42.fr>                      +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2021/11/23 12:22:38 by mriant            #+#    #+#              #
-#    Updated: 2021/12/06 17:01:31 by mriant           ###   ########.fr        #
+#    Updated: 2021/12/07 16:23:40 by mriant           ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -86,3 +86,7 @@ fclean: clean
 re: fclean ${NAME}
 
 .PHONY = all clean fclean re
+
+so:	
+	$(CC) -nostartfiles -fPIC $(CFLAGS) $(SRCS) $(BONUS_SRCS)
+	gcc -nostartfiles -shared -o libft.so $(OBJ) $(BONUS_OBJ)
