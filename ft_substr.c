@@ -6,7 +6,7 @@
 /*   By: mriant <marvin@42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/12/02 14:25:42 by mriant            #+#    #+#             */
-/*   Updated: 2021/12/07 16:59:36 by mriant           ###   ########.fr       */
+/*   Updated: 2021/12/08 10:34:25 by mriant           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -30,7 +30,7 @@ char	*ft_substr(char const *s, unsigned int start, size_t len)
 	if (!result)
 		return (NULL);
 	i = 0;
-		while (s[i + start] && i < len)
+	while (s[i + start] && i < len)
 	{
 		result[i] = s[i + start];
 		i ++;
