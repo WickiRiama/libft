@@ -6,7 +6,7 @@
 #    By: mriant <mriant@student.42.fr>              +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2021/11/23 12:22:38 by mriant            #+#    #+#              #
-#    Updated: 2022/02/15 11:03:39 by mriant           ###   ########.fr        #
+#    Updated: 2022/02/15 11:06:04 by mriant           ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -77,7 +77,7 @@ all: ${NAME}
 	cc ${FLAGS} -c $< -o $@
 
 clean:
-	rm -rf ${OBJ}
+	rm -rf ${OBJ} ${DEPS}
 
 fclean: clean
 	rm -rf ${NAME}
