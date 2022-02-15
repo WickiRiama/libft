@@ -6,7 +6,11 @@
 #    By: mriant <mriant@student.42.fr>              +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2021/11/23 12:22:38 by mriant            #+#    #+#              #
+<<<<<<< HEAD
 #    Updated: 2022/02/15 10:58:59 by mriant           ###   ########.fr        #
+=======
+#    Updated: 2021/12/10 11:21:32 by mriant           ###   ########.fr        #
+>>>>>>> 8bc89bc0e9a0dd42899c6d895ade483f27226c01
 #                                                                              #
 # **************************************************************************** #
 
@@ -60,14 +64,16 @@ SRCS = ft_isalpha.c \
 	ft_printstr.c \
 	ft_printuint.c
 
+HEAD_PATH = .
+
 OBJ = ${SRCS:%.c=%.o}
 
 DEPS = ${SRCS:.c=.d}
 
 FLAGS = -Wall -Wextra -Werror -g -MMD
 
-${NAME}: ${OBJ}
-	ar rcs ${NAME} ${OBJ}
+${NAME}: ${OBJ} ${HEAD_PATH}/libft.h
+	ar -rcs ${NAME} ${OBJ}
 
 all: ${NAME}
 

@@ -6,7 +6,7 @@
 /*   By: mriant <marvin@42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/12/03 17:11:18 by mriant            #+#    #+#             */
-/*   Updated: 2021/12/03 17:23:35 by mriant           ###   ########.fr       */
+/*   Updated: 2021/12/10 11:35:20 by mriant           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,12 +14,5 @@
 
 void	ft_putstr_fd(char *s, int fd)
 {
-	int	i;
-
-	i = 0;
-	while (s[i])
-	{
-		ft_putchar_fd(s[i], fd);
-		i ++;
-	}
+	write(fd, s, ft_strlen(s));
 }
