@@ -6,7 +6,7 @@
 /*   By: mriant <mriant@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/11/23 17:16:58 by mriant            #+#    #+#             */
-/*   Updated: 2022/02/15 11:01:25 by mriant           ###   ########.fr       */
+/*   Updated: 2022/02/16 13:29:50 by mriant           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -68,15 +68,14 @@ void	ft_lstclear(t_list **lst, void (*del)(void *));
 void	ft_lstiter(t_list *lst, void (*f)(void *));
 t_list	*ft_lstmap(t_list *lst, void *(*f)(void *), void (*del)(void *));
 int		ft_printf(const char *s, ...);
-void	ft_printint(long long int n, int *result, char *base, int len);
-void	ft_printuint(t_llui n, int *result, char *base, int len);
-int		ft_putdec(int n);
-int		ft_putpoint(intptr_t n);
-int		ft_putchar_int(char c);
-int		ft_putstr_int(char *s);
-int		ft_putuint(unsigned int n);
-int		ft_putx(unsigned int n);
-int		ft_putxmaj(unsigned int n);
-size_t	ft_strlen(const char *s);
+void	ft_printint(long long int n, int *result, char *base, int fd);
+void	ft_printuint(t_llui n, int *result, char *base, int fd);
+int		ft_putdec(int n, int fd);
+int		ft_putpoint(intptr_t n, int fd);
+int		ft_putchar_int(char c, int fd);
+int		ft_putstr_int(char *s, int fd);
+int		ft_putuint(unsigned int n, int fd);
+int		ft_putx(unsigned int n, int fd);
+int		ft_putxmaj(unsigned int n, int fd);
 
 #endif
