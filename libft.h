@@ -6,7 +6,7 @@
 /*   By: mriant <mriant@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/11/23 17:16:58 by mriant            #+#    #+#             */
-/*   Updated: 2022/02/16 13:29:50 by mriant           ###   ########.fr       */
+/*   Updated: 2022/02/16 17:20:06 by mriant           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -68,6 +68,7 @@ void	ft_lstclear(t_list **lst, void (*del)(void *));
 void	ft_lstiter(t_list *lst, void (*f)(void *));
 t_list	*ft_lstmap(t_list *lst, void *(*f)(void *), void (*del)(void *));
 int		ft_printf(const char *s, ...);
+int		ft_fprintf(int fd, const char *s, ...);
 void	ft_printint(long long int n, int *result, char *base, int fd);
 void	ft_printuint(t_llui n, int *result, char *base, int fd);
 int		ft_putdec(int n, int fd);
