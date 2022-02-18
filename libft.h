@@ -6,13 +6,14 @@
 /*   By: mriant <mriant@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/11/23 17:16:58 by mriant            #+#    #+#             */
-/*   Updated: 2022/02/18 13:46:46 by mriant           ###   ########.fr       */
+/*   Updated: 2022/02/18 13:55:41 by mriant           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #ifndef LIBFT_H
 # define LIBFT_H
 
+# include <stdarg.h>
 # include <stddef.h>
 # include <stdlib.h>
 # include <unistd.h>
@@ -25,6 +26,7 @@ typedef struct s_list
 int		ft_atoi(const char *nptr);
 void	ft_bzero(void *s, size_t n);
 void	*ft_calloc(size_t count, size_t size);
+int		ft_fprintf(int fd, const char *s, ...);
 int		ft_isalnum(int c);
 int		ft_isalpha(int c);
 int		ft_isascii(int c);
@@ -46,10 +48,20 @@ int		ft_memcmp(const void *s1, const void *s2, size_t n);
 void	*ft_memcpy(void *s1, const void *s2, size_t n);
 void	*ft_memmove(void *s1, const void *s2, size_t n);
 void	*ft_memset(void *b, int c, size_t n);
+int		ft_printf(const char *s, ...);
+void	ft_printint(long long int n, int *result, char *base, int fd);
+void	ft_printuint(t_llui n, int *result, char *base, int fd);
 void	ft_putchar_fd(char c, int fd);
+int		ft_putchar_int(char c, int fd);
+int		ft_putdec(int n, int fd);
 void	ft_putendl_fd(char *s, int fd);
 void	ft_putnbr_fd(int n, int fd);
+int		ft_putpoint(intptr_t n, int fd);
 void	ft_putstr_fd(char *s, int fd);
+int		ft_putstr_int(char *s, int fd);
+int		ft_putuint(unsigned int n, int fd);
+int		ft_putx(unsigned int n, int fd);
+int		ft_putxmaj(unsigned int n, int fd);
 char	**ft_split(char const *s, char c);
 char	*ft_strchr(const char *s, int c);
 char	*ft_strdup(const char *s1);
