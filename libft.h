@@ -6,7 +6,7 @@
 /*   By: mriant <mriant@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/11/23 17:16:58 by mriant            #+#    #+#             */
-/*   Updated: 2022/03/01 10:38:58 by mriant           ###   ########.fr       */
+/*   Updated: 2022/03/01 11:12:10 by mriant           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -23,7 +23,7 @@ typedef struct s_list
 	void			*content;
 	struct s_list	*next;
 }	t_list;
-typedef long long unsigned int t_llui;
+typedef long long unsigned int	t_llui;
 int		ft_atoi(const char *nptr);
 void	ft_bzero(void *s, size_t n);
 void	*ft_calloc(size_t count, size_t size);
