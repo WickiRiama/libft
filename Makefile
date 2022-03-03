@@ -6,7 +6,7 @@
 #    By: mriant <mriant@student.42.fr>              +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2021/11/23 12:22:38 by mriant            #+#    #+#              #
-#    Updated: 2022/03/03 10:00:26 by mriant           ###   ########.fr        #
+#    Updated: 2022/03/03 11:05:56 by mriant           ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -60,7 +60,9 @@ SRCS = ft_isalpha.c \
 	ft_printint.c \
 	ft_printstr.c \
 	ft_printuint.c \
-	ft_strcmp.c
+	ft_strcmp.c \
+	ft_min.c \
+	ft_max.c
 
 HEAD_PATH = .
 

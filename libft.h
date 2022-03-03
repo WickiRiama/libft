@@ -6,7 +6,7 @@
 /*   By: mriant <mriant@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/11/23 17:16:58 by mriant            #+#    #+#             */
-/*   Updated: 2022/03/03 10:05:19 by mriant           ###   ########.fr       */
+/*   Updated: 2022/03/03 11:05:31 by mriant           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -44,11 +44,13 @@ t_list	*ft_lstlast(t_list *lst);
 t_list	*ft_lstmap(t_list *lst, void *(*f)(void *), void (*del)(void *));
 t_list	*ft_lstnew(void *content);
 int		ft_lstsize(t_list *lst);
+int		ft_max(int a, int b);
 void	*ft_memchr(const void *s, int c, size_t n);
 int		ft_memcmp(const void *s1, const void *s2, size_t n);
 void	*ft_memcpy(void *s1, const void *s2, size_t n);
 void	*ft_memmove(void *s1, const void *s2, size_t n);
 void	*ft_memset(void *b, int c, size_t n);
+int		ft_min(int a, int b);
 int		ft_printf(const char *s, ...);
 void	ft_printint(long long int n, int *result, char *base, int fd);
 void	ft_printuint(t_llui n, int *result, char *base, int fd);
