@@ -6,7 +6,7 @@
 #    By: mriant <mriant@student.42.fr>              +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2021/11/23 12:22:38 by mriant            #+#    #+#              #
-#    Updated: 2022/03/03 11:05:56 by mriant           ###   ########.fr        #
+#    Updated: 2022/04/07 09:47:20 by mriant           ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -66,9 +66,9 @@ SRCS = ft_isalpha.c \
 
 HEAD_PATH = .
 
-OBJ = ${SRCS:%.c=%.o}
+OBJ = ${SRCS:%.c=build/%.o}
 
-DEPS = ${SRCS:.c=.d}
+DEPS = ${SRCS:%.c=build/%.d}
 
 FLAGS = -Wall -Wextra -Werror -g -MMD
 
@@ -77,11 +77,13 @@ ${NAME}: ${OBJ} ${HEAD_PATH}/libft.h
 
 all: ${NAME}
 
-%.o: %.c
-	@cc ${FLAGS} -c $< -o $@
+build/%.o: %.c
+	mkdir -p build
+	cc ${FLAGS} -c $< -o $@
 
 clean:
 	rm -rf ${OBJ} ${DEPS}
+	rm -rf build
 
 fclean: clean
 	rm -rf ${NAME}
