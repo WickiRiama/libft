@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_atoi.c                                          :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: mriant <marvin@42.fr>                      +#+  +:+       +#+        */
+/*   By: mriant <mriant@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/12/02 10:15:16 by mriant            #+#    #+#             */
-/*   Updated: 2021/12/02 10:52:09 by mriant           ###   ########.fr       */
+/*   Updated: 2022/04/15 11:40:53 by mriant           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -29,6 +29,8 @@ int	ft_atoi(const char *nptr)
 	i = 0;
 	ispos = 1;
 	result = 0;
+	if (!nptr)
+		return (0);
 	while (ft_isspace(nptr[i]))
 		i ++;
 	if (nptr[i] == '+')
