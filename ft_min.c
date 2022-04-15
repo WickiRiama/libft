@@ -1,42 +1,21 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_atoi.c                                          :+:      :+:    :+:   */
+/*   ft_min.c                                           :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: mriant <mriant@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2021/12/02 10:15:16 by mriant            #+#    #+#             */
-/*   Updated: 2022/04/15 11:43:27 by mriant           ###   ########.fr       */
+/*   Created: 2022/03/03 11:01:28 by mriant            #+#    #+#             */
+/*   Updated: 2022/03/03 11:04:45 by mriant           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-int	ft_atoi(const char *nptr)
+int	ft_min(int a, int b)
 {
-	long int	result;
-	int			ispos;
-	int			i;
-
-	i = 0;
-	ispos = 1;
-	result = 0;
-	if (!nptr)
-		return (0);
-	while (ft_isspace(nptr[i]))
-		i ++;
-	if (nptr[i] == '+')
-		i ++;
-	else if (nptr[i] == '-')
-	{
-		i ++;
-		ispos = -1;
-	}
-	while (ft_isdigit(nptr[i]))
-	{
-		result = result * 10 + (nptr[i] - '0');
-		i ++;
-	}
-	result = ispos * result;
-	return ((int)result);
+	if (a < b)
+		return (a);
+	else
+		return (b);
 }

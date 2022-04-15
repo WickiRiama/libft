@@ -6,7 +6,7 @@
 #    By: mriant <mriant@student.42.fr>              +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2021/11/23 12:22:38 by mriant            #+#    #+#              #
-#    Updated: 2022/02/16 11:09:23 by mriant           ###   ########.fr        #
+#    Updated: 2022/04/07 09:47:20 by mriant           ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -16,6 +16,7 @@ SRCS = ft_isalpha.c \
 	ft_isdigit.c \
 	ft_isalnum.c \
 	ft_isascii.c \
+	ft_isspace.c \
 	ft_isprint.c \
 	ft_strlen.c \
 	ft_memset.c \
@@ -58,13 +59,16 @@ SRCS = ft_isalpha.c \
 	ft_printf.c \
 	ft_printint.c \
 	ft_printstr.c \
-	ft_printuint.c
+	ft_printuint.c \
+	ft_strcmp.c \
+	ft_min.c \
+	ft_max.c
 
 HEAD_PATH = .
 
-OBJ = ${SRCS:%.c=%.o}
+OBJ = ${SRCS:%.c=build/%.o}
 
-DEPS = ${SRCS:.c=.d}
+DEPS = ${SRCS:%.c=build/%.d}
 
 FLAGS = -Wall -Wextra -Werror -g -MMD
 
@@ -73,11 +77,13 @@ ${NAME}: ${OBJ} ${HEAD_PATH}/libft.h
 
 all: ${NAME}
 
-%.o: %.c
-	@cc ${FLAGS} -c $< -o $@
+build/%.o: %.c
+	mkdir -p build
+	cc ${FLAGS} -c $< -o $@
 
 clean:
 	rm -rf ${OBJ} ${DEPS}
+	rm -rf build
 
 fclean: clean
 	rm -rf ${NAME}

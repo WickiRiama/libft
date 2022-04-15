@@ -1,42 +1,27 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_atoi.c                                          :+:      :+:    :+:   */
+/*   ft_strcmp.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: mriant <mriant@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2021/12/02 10:15:16 by mriant            #+#    #+#             */
-/*   Updated: 2022/04/15 11:43:27 by mriant           ###   ########.fr       */
+/*   Created: 2022/03/03 09:52:40 by mriant            #+#    #+#             */
+/*   Updated: 2022/03/03 10:04:41 by mriant           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-int	ft_atoi(const char *nptr)
+int	ft_strcmp(const char *s1, const char *s2)
 {
-	long int	result;
-	int			ispos;
-	int			i;
+	size_t			i;
 
-	i = 0;
-	ispos = 1;
-	result = 0;
-	if (!nptr)
+	if (!s1 && !s2)
 		return (0);
-	while (ft_isspace(nptr[i]))
+	if (!s1 || !s2)
+		return (-1);
+	i = 0;
+	while (s1[i] && s2[i] && s1[i] == s2[i])
 		i ++;
-	if (nptr[i] == '+')
-		i ++;
-	else if (nptr[i] == '-')
-	{
-		i ++;
-		ispos = -1;
-	}
-	while (ft_isdigit(nptr[i]))
-	{
-		result = result * 10 + (nptr[i] - '0');
-		i ++;
-	}
-	result = ispos * result;
-	return ((int)result);
+	return (s1[i] - s2[i]);
 }
